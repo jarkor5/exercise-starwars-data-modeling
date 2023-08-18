@@ -37,9 +37,9 @@ class Favorito(Base):
     planeta_id = Column(Integer, ForeignKey('planeta.id'))
     personaje_id = Column(Integer, ForeignKey('personaje.id'))
 
-# Dibuja el diagrama de relación de entidades
+
 render_er(Base, 'diagram.png')
 
-# Crea la base de datos
+
 engine = create_engine('sqlite:///starwars_blog.db')
 Base.metadata.create_all(engine)
